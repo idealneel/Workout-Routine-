@@ -293,31 +293,6 @@
     transition: opacity 0.3s ease;
   }
 
-  .next-ex-btn {
-    display: none;
-    position: absolute;
-    bottom: 20px;
-    right: 24px;
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 1px;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    z-index: 10;
-    transition: all 0.2s ease;
-  }
-  .next-ex-btn:hover {
-    border-color: var(--accent-pull);
-    color: var(--accent-pull);
-    background: rgba(62,207,207,0.05);
-  }
-  .exercise-card.active-ex .next-ex-btn {
-    display: block;
-  }
   .ex-card-header {
     display: grid;
     grid-template-columns: 48px 1fr auto;

@@ -101,51 +101,61 @@ function initHighlighting() {
   });
 }
 
-/* === NEXT EXERCISE BUTTONS === */
-function initNextExButtons() {
+/* === SWIPE GESTURES === */
+let touchStartX = 0;
+let touchEndX = 0;
+
+function initSwipeGestures() {
   const cards = document.querySelectorAll('.exercise-card');
   cards.forEach(card => {
-    // Inject button
-    const btn = document.createElement('button');
-    btn.className = 'next-ex-btn';
-    btn.innerText = 'NEXT EXERCISE';
-    card.appendChild(btn);
+    card.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
 
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Don't trigger card highlight toggle
-      
-      const container = card.closest('.exercises-container');
-      const allInContainer = Array.from(container.querySelectorAll('.exercise-card'));
-      const currentIndex = allInContainer.indexOf(card);
-      const nextCard = allInContainer[currentIndex + 1];
-
-      // Deactivate all highlights
-      document.querySelectorAll('.exercise-card').forEach(c => {
-        c.classList.remove('active-ex', 'dimmed');
-      });
-
-      if (nextCard) {
-        // Activate next
-        nextCard.classList.add('active-ex');
-        // Dim others
-        document.querySelectorAll('.exercise-card').forEach(c => {
-          if (c !== nextCard) c.classList.add('dimmed');
-        });
-        // Scroll to next
-        nextCard.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    });
+    card.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe(card);
+    }, { passive: true });
   });
+}
+
+function handleSwipe(card) {
+  const deltaX = touchStartX - touchEndX;
+  if (Math.abs(deltaX) < 50) return;
+
+  const container = card.closest('.exercises-container');
+  if (!container) return;
+  
+  const allCards = Array.from(container.querySelectorAll('.exercise-card'));
+  const currentIndex = allCards.indexOf(card);
+  let targetCard = null;
+
+  if (deltaX > 50) { // Swipe Left -> Next
+    targetCard = allCards[currentIndex + 1];
+  } else if (deltaX < -50) { // Swipe Right -> Prev
+    targetCard = allCards[currentIndex - 1];
+  }
+
+  if (targetCard) {
+    document.querySelectorAll('.exercise-card').forEach(c => {
+      c.classList.remove('active-ex', 'dimmed');
+    });
+    targetCard.classList.add('active-ex');
+    document.querySelectorAll('.exercise-card').forEach(c => {
+      if (c !== targetCard) c.classList.add('dimmed');
+    });
+    targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   initTracker();
   initHighlighting();
-  initNextExButtons();
+  initSwipeGestures();
 });
 
 if (document.readyState === "complete" || document.readyState === "interactive") {
   initTracker();
   initHighlighting();
-  initNextExButtons();
+  initSwipeGestures();
 }
