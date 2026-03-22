@@ -57,6 +57,7 @@ function initHighlighting() {
         else if (i === targetIndex) c.classList.add('active-ex');
         else c.classList.add('dimmed');
       });
+      updateProgress(container);
     });
   });
 }
@@ -104,8 +105,23 @@ function handleSwipe(card) {
       else if (i === targetIndex) c.classList.add('active-ex');
       else c.classList.add('dimmed');
     });
+    updateProgress(container);
     targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
   }
+}
+
+/* === PROGRESS TRACKER === */
+function updateProgress(container) {
+  if (!container) return;
+  const fill = container.querySelector('.day-progress-fill');
+  if (!fill) return;
+  
+  const allCards = container.querySelectorAll('.exercise-card');
+  const doneCount = container.querySelectorAll('.exercise-card.done-ex').length;
+  const totalCount = allCards.length;
+  
+  const percentage = totalCount > 0 ? (doneCount / totalCount) * 100 : 0;
+  fill.style.width = percentage + '%';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
