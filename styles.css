@@ -430,7 +430,7 @@
   .tip-box.pull-tip { border-left-color: var(--accent-pull); }
 
   /* SECTION HEADER */
-  .section-header { padding: 32px 40px 32px; border-bottom: 1px solid var(--border); }
+  .section-header { padding: 40px 40px 32px; border-bottom: 1px solid var(--border); }
   .section-header h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 36px; letter-spacing: 2px;
@@ -438,11 +438,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-bottom: 12px;
   }
-  .section-header p { color: var(--muted); font-size: 13.5px; margin-top: 6px; margin-bottom: 8px; }
+  .section-header p { color: var(--muted); font-size: 13.5px; margin-top: 8px; padding-bottom: 4px; margin-bottom: 8px; }
 
   @media (max-width: 600px) {
-    .hero, .days-nav, .warmup-bar, .exercises-container, .section-header { padding-left: 20px; padding-right: 20px; }
+    .hero, .days-nav, .warmup-bar, .exercises-container { padding-left: 20px; padding-right: 20px; }
+    .section-header { padding: 32px 20px 24px; }
     .nav-tabs { padding: 0 20px; }
     .ex-card-header { grid-template-columns: 32px 1fr; gap: 10px; }
     .ex-number { font-size: 28px; }
