@@ -36,3 +36,46 @@ window.addEventListener('scroll', () => {
   const btn = document.getElementById('back-to-top');
   if (btn) btn.classList.toggle('visible', window.scrollY > 300);
 });
+
+/* === TRACKER LOGIC === */
+function initTracker() {
+  const cards = document.querySelectorAll('.lift-card');
+  
+  cards.forEach(card => {
+    const liftName = card.querySelector('.lift-name').innerText;
+    const weightInput = card.querySelector('input[placeholder="0"]'); 
+    const repsInput = card.querySelectorAll('input')[1]; 
+    const logBtn = card.querySelector('.log-btn');
+    const statusLine = card.querySelector('.status-line');
+    const target = parseInt(card.getAttribute('data-target'));
+
+    const savedData = JSON.parse(localStorage.getItem(`ppl_tracker_${liftName}`));
+    if (savedData) {
+      weightInput.value = savedData.weight || '';
+      repsInput.value = savedData.reps || '';
+      updateStatus(parseInt(savedData.reps) || 0, target, statusLine);
+    }
+
+    logBtn.addEventListener('click', () => {
+      const weight = weightInput.value;
+      const reps = parseInt(repsInput.value) || 0;
+      localStorage.setItem(`ppl_tracker_${liftName}`, JSON.stringify({ weight, reps }));
+      updateStatus(reps, target, statusLine);
+    });
+  });
+}
+
+function updateStatus(reps, target, el) {
+  if (reps >= target) {
+    el.innerText = "✓ Ready to progress — add 2.5 kg next session";
+    el.classList.add('status-success');
+  } else {
+    el.innerText = "Keep this weight — hit all reps first";
+    el.classList.remove('status-success');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initTracker);
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  initTracker();
+}

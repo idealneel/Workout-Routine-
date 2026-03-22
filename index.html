@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title>Workout Routine</title>
-<meta name="description" content="A 6-day Push Pull Legs hypertrophy program with detailed daily guides and YouTube timestamps.">
-<meta property="og:title" content="Workout Routine — PPL Beginner Block">
-<meta property="og:description" content="A 6-day Push Pull Legs hypertrophy program with detailed daily guides and YouTube timestamps.">
+<title>PPL Foundation Block — Beginner Program</title>
+<meta name="description" content="A beginner-friendly Push Pull Legs program. 3 days per week, RPE-based loading, form-focused with progressive overload.">
+<meta property="og:title" content="PPL Foundation Block — Beginner Program">
+<meta property="og:description" content="A beginner-friendly Push Pull Legs program. 3 days per week, RPE-based loading, form-focused with progressive overload.">
 <meta property="og:url" content="https://pplplan.vercel.app">
 <meta property="og:type" content="website">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=JetBrains+Mono:wght@400;600&display=block" rel="stylesheet">
@@ -21,13 +21,14 @@
   <div class="sk-bar" style="width:100%;height:1px;margin-top:40px;"></div>
 </div>
 <div class="hero">
-  <h1>Push · Pull · <span>Legs</span></h1>
-  <p class="hero-sub">A 6-day workout plan for beginner lifters. High effort, novel exercise selection, and advanced intensification techniques.</p>
+  <div class="hero-label">BEGINNER · PUSH PULL LEGS</div>
+  <h1>FOUNDATION <span>BLOCK</span></h1>
+  <p class="hero-sub">A 3-day beginner PPL program built around learning movement patterns, building consistency, and progressing safely over 12 weeks.</p>
   <div class="hero-badges">
-    <span class="badge">6 DAYS / WEEK</span>
+    <span class="badge">3 DAYS / WEEK</span>
     <span class="badge">BEGINNER</span>
-    <span class="badge">RPE-BASED LOADING</span>
-    <span class="badge">MYO-REPS + DROP SETS</span>
+    <span class="badge">FORM FIRST</span>
+    <span class="badge">12 WEEK PROGRAM</span>
     <a class="yt-source" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=10" target="_blank">WATCH ON YOUTUBE · 0:10</a>
   </div>
 </div>
@@ -35,6 +36,9 @@
 <div class="nav-tabs">
   <button class="nav-tab active" onclick="switchTab('weekly',this)">PART 1 — WEEKLY PLAN</button>
   <button class="nav-tab" onclick="switchTab('daily',this)">PART 2 — DAILY GUIDES</button>
+  <button class="nav-tab" onclick="switchTab('tracker',this)">PART 3 — PROGRESS TRACKER</button>
+  <button class="nav-tab" onclick="switchTab('progression',this)">PART 4 — PROGRESSION GUIDE</button>
+  <button class="nav-tab" onclick="switchTab('restday',this)">PART 5 — REST DAY</button>
 </div>
 
 <!-- ===== PART 1 ===== -->
@@ -42,9 +46,7 @@
 
   <div class="section-header">
     <h2>Weekly Routine Overview</h2>
-    <p>6 training days across Legs / Push / Pull. Each muscle group trained twice per week.
-      <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=10" target="_blank">0:10</a>
-    </p>
+    <p>3 training days across Push / Pull / Legs. Focus on fundamental movements and consistent habits.</p>
   </div>
 
   <div class="weekly-grid">
@@ -53,19 +55,16 @@
       <div class="day-header">
         <div class="day-num">01</div>
         <div class="day-info">
-          <div class="day-tag tag-legs">LEGS</div>
-          <div class="day-title">Legs 1 — Quad Focused</div>
-          <div class="day-timestamp-range"><a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=52" target="_blank">0:52 – 4:54</a></div>
+          <div class="day-tag tag-push">PUSH</div>
+          <div class="day-title">Push Day — Chest, Shoulders & Triceps</div>
         </div>
       </div>
       <ul class="exercise-list">
-        <li><span class="ex-name">Squat</span><span class="ex-right"><span class="ex-sets">3×4 @ 80% 1RM</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=68" target="_blank">1:08</a></span></li>
-        <li><span class="ex-name">Romanian Deadlift</span><span class="ex-right"><span class="ex-sets">3×10</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=120" target="_blank">2:00</a></span></li>
-        <li><span class="ex-name">Unilateral Leg Press</span><span class="ex-right"><span class="ex-sets">3×15/leg</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=145" target="_blank">2:25</a></span></li>
-        <li><span class="ex-name">Eccentric Leg Extension</span><span class="ex-right"><span class="ex-sets">3×10–12</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=179" target="_blank">2:59</a></span></li>
-        <li><span class="ex-name">Seated Hamstring Curl</span><span class="ex-right"><span class="ex-sets">3×10–12</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=209" target="_blank">3:29</a></span></li>
-        <li><span class="ex-name">Standing Calf Raise</span><span class="ex-right"><span class="ex-sets">3×10–12</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=252" target="_blank">4:12</a></span></li>
-        <li><span class="ex-name">Decline Crunches / Planks</span><span class="ex-right"><span class="ex-sets">Superset</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=275" target="_blank">4:35</a></span></li>
+        <li><span class="ex-name">Bench Press</span><span class="ex-right"><span class="ex-sets">3×8–10</span></span></li>
+        <li><span class="ex-name">Overhead Press</span><span class="ex-right"><span class="ex-sets">3×8–10</span></span></li>
+        <li><span class="ex-name">Incline DB Press</span><span class="ex-right"><span class="ex-sets">3×10–12</span></span></li>
+        <li><span class="ex-name">Lateral Raises</span><span class="ex-right"><span class="ex-sets">3×12–15</span></span></li>
+        <li><span class="ex-name">Tricep Pushdown</span><span class="ex-right"><span class="ex-sets">3×12–15</span></span></li>
       </ul>
     </div>
 
@@ -73,18 +72,16 @@
       <div class="day-header">
         <div class="day-num">02</div>
         <div class="day-info">
-          <div class="day-tag tag-push">PUSH</div>
-          <div class="day-title">Push 1 — Chest Focused</div>
-          <div class="day-timestamp-range"><a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=294" target="_blank">4:54 – 7:24</a></div>
+          <div class="day-tag tag-pull">PULL</div>
+          <div class="day-title">Pull Day — Back & Biceps</div>
         </div>
       </div>
       <ul class="exercise-list">
-        <li><span class="ex-name">Bench Press</span><span class="ex-right"><span class="ex-sets">3×8 @ 72.5% 1RM</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=300" target="_blank">5:00</a></span></li>
-        <li><span class="ex-name">Machine Shoulder Press</span><span class="ex-right"><span class="ex-sets">3×12</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=329" target="_blank">5:29</a></span></li>
-        <li><span class="ex-name">Dips</span><span class="ex-right"><span class="ex-sets">3×12–15</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=358" target="_blank">5:58</a></span></li>
-        <li><span class="ex-name">Eccentric Skull Crusher</span><span class="ex-right"><span class="ex-sets">3×8–10</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=378" target="_blank">6:18</a></span></li>
-        <li><span class="ex-name">Egyptian Cable Lateral Raise</span><span class="ex-right"><span class="ex-sets">3×12 + Myo</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=392" target="_blank">6:32</a></span></li>
-        <li><span class="ex-name">Cable Tricep Kickback</span><span class="ex-right"><span class="ex-sets">2×20–30</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=420" target="_blank">7:00</a></span></li>
+        <li><span class="ex-name">Lat Pulldown</span><span class="ex-right"><span class="ex-sets">3×10–12</span></span></li>
+        <li><span class="ex-name">Seated Cable Row</span><span class="ex-right"><span class="ex-sets">3×10–12</span></span></li>
+        <li><span class="ex-name">Face Pulls</span><span class="ex-right"><span class="ex-sets">3×15</span></span></li>
+        <li><span class="ex-name">Dumbbell Curl</span><span class="ex-right"><span class="ex-sets">3×12</span></span></li>
+        <li><span class="ex-name">Hammer Curl</span><span class="ex-right"><span class="ex-sets">3×12</span></span></li>
       </ul>
     </div>
 
@@ -92,74 +89,16 @@
       <div class="day-header">
         <div class="day-num">03</div>
         <div class="day-info">
-          <div class="day-tag tag-pull">PULL</div>
-          <div class="day-title">Pull 1 — Lat Focused</div>
-          <div class="day-timestamp-range"><a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=444" target="_blank">7:24 – 9:35</a></div>
-        </div>
-      </div>
-      <ul class="exercise-list">
-        <li><span class="ex-name">Weighted Pull-up</span><span class="ex-right"><span class="ex-sets">3×6</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=452" target="_blank">7:32</a></span></li>
-        <li><span class="ex-name">Seated Cable Row</span><span class="ex-right"><span class="ex-sets">3×10–12</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=481" target="_blank">8:01</a></span></li>
-        <li><span class="ex-name">Kneeling Cable Pullover</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=507" target="_blank">8:27</a></span></li>
-        <li><span class="ex-name">Hammer Strength Curl</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=530" target="_blank">8:50</a></span></li>
-        <li><span class="ex-name">Incline Dumbbell Curl</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=557" target="_blank">9:17</a></span></li>
-      </ul>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-num">04</div>
-        <div class="day-info">
           <div class="day-tag tag-legs">LEGS</div>
-          <div class="day-title">Legs 2 — Posterior Chain</div>
-          <div class="day-timestamp-range"><a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=575" target="_blank">9:35 – 12:15</a></div>
+          <div class="day-title">Leg Day — Quads, Hamstrings & Glutes</div>
         </div>
       </div>
       <ul class="exercise-list">
-        <li><span class="ex-name">Deadlift</span><span class="ex-right"><span class="ex-sets">3×3 @ 80–85% 1RM</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=584" target="_blank">9:44</a></span></li>
-        <li><span class="ex-name">Machine Hack Squat</span><span class="ex-right"><span class="ex-sets">3×10–12</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=618" target="_blank">10:18</a></span></li>
-        <li><span class="ex-name">Unilateral Hip Thrust</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=672" target="_blank">11:12</a></span></li>
-        <li><span class="ex-name">Nordic Ham Curl / Back Ext.</span><span class="ex-right"><span class="ex-sets">Superset</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=683" target="_blank">11:23</a></span></li>
-        <li><span class="ex-name">Unilateral Calf Raise</span><span class="ex-right"><span class="ex-sets">3×8–10</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=700" target="_blank">11:40</a></span></li>
-        <li><span class="ex-name">Weighted L-Sit Hold</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=710" target="_blank">11:50</a></span></li>
-      </ul>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-num">05</div>
-        <div class="day-info">
-          <div class="day-tag tag-push">PUSH</div>
-          <div class="day-title">Push 2 — Delt Focused</div>
-          <div class="day-timestamp-range"><a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=735" target="_blank">12:15 – 15:03</a></div>
-        </div>
-      </div>
-      <ul class="exercise-list">
-        <li><span class="ex-name">Overhead Press</span><span class="ex-right"><span class="ex-sets">4×4 @ 80% 1RM</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=739" target="_blank">12:19</a></span></li>
-        <li><span class="ex-name">Close Grip Bench Press</span><span class="ex-right"><span class="ex-sets">3×10</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=759" target="_blank">12:39</a></span></li>
-        <li><span class="ex-name">Low-to-High Cable Crossover</span><span class="ex-right"><span class="ex-sets">3×10–12</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=792" target="_blank">13:12</a></span></li>
-        <li><span class="ex-name">Overhead Tricep Extension</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=827" target="_blank">13:47</a></span></li>
-        <li><span class="ex-name">DB Lateral Raise 21s</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=847" target="_blank">14:07</a></span></li>
-        <li><span class="ex-name">Neck Training (8-way)</span><span class="ex-right"><span class="ex-sets">1–2×/wk</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=884" target="_blank">14:44</a></span></li>
-      </ul>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <div class="day-num">06</div>
-        <div class="day-info">
-          <div class="day-tag tag-pull">PULL</div>
-          <div class="day-title">Pull 2 — Mid-Back & Rear Delt</div>
-          <div class="day-timestamp-range"><a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=903" target="_blank">15:03 – 18:10</a></div>
-        </div>
-      </div>
-      <ul class="exercise-list">
-        <li><span class="ex-name">Omni-Grip Lat Pulldown</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=928" target="_blank">15:28</a></span></li>
-        <li><span class="ex-name">Chest Supported Row</span><span class="ex-right"><span class="ex-sets">3×10–12</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=954" target="_blank">15:54</a></span></li>
-        <li><span class="ex-name">Rope Face Pulls</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=991" target="_blank">16:31</a></span></li>
-        <li><span class="ex-name">Incline DB Shrug</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1005" target="_blank">16:45</a></span></li>
-        <li><span class="ex-name">Rear Delt Flyes</span><span class="ex-right"><span class="ex-sets">2×15</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1024" target="_blank">17:04</a></span></li>
-        <li><span class="ex-name">Easy Bar Curls Superset</span><span class="ex-right"><span class="ex-sets">3 sets</span><a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1057" target="_blank">17:37</a></span></li>
+        <li><span class="ex-name">Goblet Squat</span><span class="ex-right"><span class="ex-sets">3×10</span></span></li>
+        <li><span class="ex-name">Romanian Deadlift</span><span class="ex-right"><span class="ex-sets">3×10</span></span></li>
+        <li><span class="ex-name">Leg Press</span><span class="ex-right"><span class="ex-sets">3×12</span></span></li>
+        <li><span class="ex-name">Leg Curl</span><span class="ex-right"><span class="ex-sets">3×12–15</span></span></li>
+        <li><span class="ex-name">Calf Raise</span><span class="ex-right"><span class="ex-sets">3×15</span></span></li>
       </ul>
     </div>
 
@@ -171,34 +110,34 @@
   </div>
   <div class="principles-grid">
     <div class="principle-card">
-      <div class="principle-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-      <div class="principle-title">Effort & RPE</div>
-      <div class="principle-body">Higher overall efforts than standard programs. Advanced intensification techniques (myo-reps, drop sets) are used strategically — not on every set.</div>
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3ecfcf" stroke-width="1.5" stroke-linecap="round"><path d="M12 2a10 10 0 1 1 0 20A10 10 0 0 1 12 2z" opacity="0.2"/><path d="M12 12 L17.5 6.5"/><circle cx="12" cy="12" r="1.5" fill="#3ecfcf"/><path d="M6 12 a6 6 0 0 1 6-6" stroke-dasharray="2 2"/></svg></div>
+      <div class="principle-title">RPE & EFFORT</div>
+      <div class="principle-body">Aim for RPE 6–8. You should finish each set feeling like you had 2–4 reps left in the tank. Never train to failure as a beginner.</div>
     </div>
     <div class="principle-card">
-      <div class="principle-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3ecfcf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-      <div class="principle-title">Joint Health <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=334" target="_blank">5:34</a></div>
-      <div class="principle-body">Machine work is prioritized on hypertrophy days to allow training closer to failure without overloading joints and stabilizers the way free weights do.</div>
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2" opacity="0.15" fill="#f5a623"/><polyline points="7,12 10,15 17,8"/></svg></div>
+      <div class="principle-title">FORM FIRST</div>
+      <div class="principle-body">Never increase weight until your form is solid. Bad reps with heavy weight build bad habits and cause injury.</div>
     </div>
     <div class="principle-card">
-      <div class="principle-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8445a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg></div>
-      <div class="principle-title">Eccentric Focus <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=182" target="_blank">3:02</a> <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=378" target="_blank">6:18</a></div>
-      <div class="principle-body">Multiple exercises use a slow 3–4 second lowering phase to maximize muscle fiber disruption and growth stimulus beyond just concentric effort.</div>
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8445a" stroke-width="1.5" stroke-linecap="round"><polyline points="4,18 8,12 12,15 16,8 20,4"/><polyline points="16,4 20,4 20,8"/></svg></div>
+      <div class="principle-title">PROGRESSIVE OVERLOAD</div>
+      <div class="principle-body">Add 2.5–5 kg to a lift once you can complete all sets and reps cleanly at RPE 7 or lower.</div>
     </div>
     <div class="principle-card">
-      <div class="principle-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
-      <div class="principle-title">Myo-Reps <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=395" target="_blank">6:35</a></div>
-      <div class="principle-body">On select exercises: hit a heavy set to near-failure, rest 2–3 breaths, then do clusters of 4 reps until you can no longer hit 4 clean reps.</div>
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"><path d="M12 3 a9 9 0 1 0 9 9"/><path d="M17 3 h4 v4"/><path d="M12 7 v5 l3 3" stroke="#a78bfa"/></svg></div>
+      <div class="principle-title">REST DAYS MATTER</div>
+      <div class="principle-body">Train Mon / Wed / Fri or any 3 non-consecutive days. Muscle is built during recovery, not just during training.</div>
     </div>
     <div class="principle-card">
-      <div class="principle-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3ecfcf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
-      <div class="principle-title">Tempo Monitoring <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=424" target="_blank">7:04</a> <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=510" target="_blank">8:30</a></div>
-      <div class="principle-body">For high-rep cable work: maintain a strict 1 sec up / 1 sec down tempo. If you can't hold it, the set is over — don't grind through sloppy reps.</div>
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3ecfcf" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="13" r="8" opacity="0.15" fill="#3ecfcf"/><circle cx="12" cy="13" r="8"/><path d="M12 9 v4 l2.5 2.5"/><path d="M9 2 h6"/></svg></div>
+      <div class="principle-title">REST BETWEEN SETS</div>
+      <div class="principle-body">Rest 2–3 minutes between compound lifts. 60–90 seconds between isolation exercises.</div>
     </div>
     <div class="principle-card">
-      <div class="principle-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="12" x2="22" y2="12"></line><rect x="4" y="6" width="3" height="12" rx="1"></rect><rect x="17" y="6" width="3" height="12" rx="1"></rect></svg></div>
-      <div class="principle-title">Neck Training <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=884" target="_blank">14:44</a></div>
-      <div class="principle-body">Include direct neck work 1–2 times per week for a minimum effective dose. Often overlooked but easy to add as a finisher on push days.</div>
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3 v4 M16 3 v4"/><path d="M4 11 h16"/><path d="M8 15 h2 M14 15 h2 M8 19 h2"/></svg></div>
+      <div class="principle-title">STICK TO THE PLAN</div>
+      <div class="principle-body">Run this program for at least 12 weeks before changing anything. Consistency beats complexity every time.</div>
     </div>
   </div>
 
@@ -208,29 +147,23 @@
 <div id="daily" class="section">
 
   <div class="days-nav">
-    <button class="day-btn legs active-day" onclick="switchDay('d1',this)">DAY 1 — LEGS (QUAD)</button>
-    <button class="day-btn push" onclick="switchDay('d2',this)">DAY 2 — PUSH (CHEST)</button>
-    <button class="day-btn pull" onclick="switchDay('d3',this)">DAY 3 — PULL (LATS)</button>
-    <button class="day-btn legs" onclick="switchDay('d4',this)">DAY 4 — LEGS (POST.)</button>
-    <button class="day-btn push" onclick="switchDay('d5',this)">DAY 5 — PUSH (DELTS)</button>
-    <button class="day-btn pull" onclick="switchDay('d6',this)">DAY 6 — PULL (MID-BACK)</button>
+    <button class="day-btn push active-day" onclick="switchDay('d1',this)">DAY 1 · PUSH</button>
+    <button class="day-btn pull" onclick="switchDay('d2',this)">DAY 2 · PULL</button>
+    <button class="day-btn legs" onclick="switchDay('d3',this)">DAY 3 · LEGS</button>
   </div>
 
-  <!-- DAY 1 -->
-  <div id="d1" class="day-content active">
+  <!-- DAY 3 -->
+  <div id="d3" class="day-content">
     <div class="day-hero">
       <div class="day-hero-top">
-        <div class="day-hero-tag" style="color:var(--accent-legs)">DAY 1 · LEGS</div>
-        <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=52" target="_blank">0:52</a>
-        <a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=52" target="_blank">0:52 – 4:54</a>
+        <div class="day-hero-tag" style="color:var(--accent-legs)">LEGS</div>
       </div>
-      <h2>Quad-Focused Leg Day</h2>
-      <p class="day-hero-desc">Primary targets: quads, hamstrings, calves. Secondary: glutes, core. Uses eccentric accentuation and unilateral work for maximum quad hypertrophy.</p>
+      <h2>LEG DAY</h2>
+      <p class="day-hero-desc">Primary targets: quads, hamstrings, glutes, calves. Start light and prioritise depth and control over weight.</p>
     </div>
     <div class="warmup-bar">
       <strong>Warm-up</strong>
-      <span>3–4 minutes light cardio + dynamic stretches to prime joints while causing minimal fatigue.</span>
-      <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=53" target="_blank">0:53</a>
+      <span>5 minutes bike or treadmill + leg swings + bodyweight squats.</span>
     </div>
     <div class="exercises-container">
 
@@ -273,13 +206,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">03</div>
-          <div class="ex-card-title">Unilateral Leg Press <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=145" target="_blank">2:25</a></div>
-          <div class="ex-card-meta">3×15 / leg</div>
+          <div class="ex-card-title">Leg Press</div>
+          <div class="ex-card-meta">3×12, RPE 7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Effort</div>
-            <div class="ex-row-val">High effort — target RPE 8–9 on working sets. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=167" target="_blank">2:47</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Don't lock out the knees at the top. Controlled lowering phase.</div>
           </div>
         </div>
       </div>
@@ -287,13 +220,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">04</div>
-          <div class="ex-card-title">Eccentric Accentuated Leg Extension <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=179" target="_blank">2:59</a></div>
-          <div class="ex-card-meta">3×10–12</div>
+          <div class="ex-card-title">Leg Curl</div>
+          <div class="ex-card-meta">3×12–15, RPE 7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Use a 3–4 second lowering phase on every rep. Set the seat further back to increase rectus femoris involvement. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=182" target="_blank">3:02</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Seated or lying both fine. Focus on the contraction at the top.</div>
           </div>
         </div>
       </div>
@@ -301,49 +234,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">05</div>
-          <div class="ex-card-title">Seated Hamstring Curl <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=209" target="_blank">3:29</a></div>
-          <div class="ex-card-meta">3×10–12</div>
+          <div class="ex-card-title">Calf Raise</div>
+          <div class="ex-card-meta">3×15, RPE 7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Why Seated</div>
-            <div class="ex-row-val">Seated curls train the hamstrings at a longer muscle length, producing greater hypertrophy stimulus than lying curls. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=225" target="_blank">3:45</a></div>
-          </div>
-          <div class="tip-box">
-            <span>Last set only: Drop set — go to failure, immediately reduce weight by 50%, go to failure again.</span>
-            <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=211" target="_blank">3:31</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">06</div>
-          <div class="ex-card-title">Standing Calf Raise <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=252" target="_blank">4:12</a></div>
-          <div class="ex-card-meta">3×10–12</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">On the weaker leg (if an imbalance exists), add myo-reps after the main set: do 4–5 reps, rest briefly, repeat until you can't hit 4 clean reps. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=257" target="_blank">4:17</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">07</div>
-          <div class="ex-card-title">Core Superset <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=275" target="_blank">4:35</a></div>
-          <div class="ex-card-meta">Superset</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Exercise A</div>
-            <div class="ex-row-val">Plate-Weighted Decline Crunches — focus on curling the ribcage down to squeeze the abs fully. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=277" target="_blank">4:37</a></div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Exercise B</div>
-            <div class="ex-row-val">Long Lever Pelvic Tilt Plank — elbows under eyes, squeeze glutes and pull pelvis into a posterior tilt. Hold 30 seconds per set. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=282" target="_blank">4:42</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Full range of motion — all the way up, all the way down. Pause at the stretch.</div>
           </div>
         </div>
       </div>
@@ -352,28 +249,30 @@
   </div>
 
   <!-- DAY 2 -->
-  <div id="d2" class="day-content">
+  <div id="d1" class="day-content active">
     <div class="day-hero">
       <div class="day-hero-top">
-        <div class="day-hero-tag" style="color:var(--accent-push)">DAY 2 · PUSH</div>
-        <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=294" target="_blank">4:54</a>
-        <a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=294" target="_blank">4:54 – 7:24</a>
+        <div class="day-hero-tag" style="color:var(--accent-push)">PUSH</div>
       </div>
-      <h2>Chest-Focused Push Day</h2>
-      <p class="day-hero-desc">Primary targets: chest, anterior delts, triceps, lateral delts. Machine work used to push closer to failure without excessive joint stress.</p>
+      <h2>PUSH DAY</h2>
+      <p class="day-hero-desc">Primary targets: chest, anterior delts, triceps. Focus on controlled reps and learning proper form before adding weight.</p>
+    </div>
+    <div class="warmup-bar">
+      <strong>Warm-up</strong>
+      <span>5 minutes light cardio + arm circles + band pull-aparts.</span>
     </div>
     <div class="exercises-container">
 
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">01</div>
-          <div class="ex-card-title">Bench Press <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=300" target="_blank">5:00</a></div>
-          <div class="ex-card-meta">3×8 @ 72.5% 1RM</div>
+          <div class="ex-card-title">Bench Press</div>
+          <div class="ex-card-meta">3×8–10, RPE 6–7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
             <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Perform a brief quarter-second pause on the chest for reps over 6. If the weight feels light, a longer pause is optional. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=310" target="_blank">5:10</a></div>
+            <div class="ex-row-val">Keep shoulder blades retracted and feet flat on the floor.</div>
           </div>
         </div>
       </div>
@@ -381,17 +280,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">02</div>
-          <div class="ex-card-title">Machine Shoulder Press <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=329" target="_blank">5:29</a></div>
-          <div class="ex-card-meta">3×12</div>
+          <div class="ex-card-title">Overhead Press</div>
+          <div class="ex-card-meta">3×8–10, RPE 6–7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Why Machine</div>
-            <div class="ex-row-val">Allows pushing sets closer to failure without overloading joints and stabilizers as much as a barbell press. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=334" target="_blank">5:34</a></div>
-          </div>
-          <div class="tip-box push-tip">
-            <span>Sub: Standing Dumbbell Arnold Press if a machine is unavailable.</span>
-            <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=351" target="_blank">5:51</a>
+            <div class="ex-row-label">Technique</div>
+            <div class="ex-row-val">Brace your core and avoid flaring the ribs.</div>
           </div>
         </div>
       </div>
@@ -399,17 +294,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">03</div>
-          <div class="ex-card-title">Dips <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=358" target="_blank">5:58</a></div>
-          <div class="ex-card-meta">3×12–15</div>
+          <div class="ex-card-title">Incline Dumbbell Press</div>
+          <div class="ex-card-meta">3×10–12, RPE 6–7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Lean forward slightly and get a deep stretch on the pecs at the bottom — this stretch signal is key for hypertrophy. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=367" target="_blank">6:07</a></div>
-          </div>
-          <div class="tip-box push-tip">
-            <span>Sub: Deficit Push-Ups if dip bars are unavailable.</span>
-            <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=375" target="_blank">6:15</a>
+            <div class="ex-row-label">Tip</div>
+            <div class="ex-row-val">Keep elbows at 45° to the body.</div>
           </div>
         </div>
       </div>
@@ -417,17 +308,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">04</div>
-          <div class="ex-card-title">Eccentric Accentuated Skull Crusher <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=378" target="_blank">6:18</a></div>
-          <div class="ex-card-meta">3×8–10</div>
+          <div class="ex-card-title">Lateral Raises</div>
+          <div class="ex-card-meta">3×12–15, RPE 7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Use a 3-second controlled lowering phase on every rep to maximally disrupt tricep fibers. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=383" target="_blank">6:23</a></div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Note</div>
-            <div class="ex-row-val">Do not fully lock out at the top — maintain constant tension throughout. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=387" target="_blank">6:27</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Lead with elbows, stop at shoulder height.</div>
           </div>
         </div>
       </div>
@@ -435,31 +322,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">05</div>
-          <div class="ex-card-title">Egyptian Cable Lateral Raise <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=392" target="_blank">6:32</a></div>
-          <div class="ex-card-meta">3×12 + Myo-reps</div>
+          <div class="ex-card-title">Tricep Pushdown</div>
+          <div class="ex-card-meta">3×12–15, RPE 7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Effort</div>
-            <div class="ex-row-val">Working sets to RPE 9–10. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=400" target="_blank">6:40</a></div>
-          </div>
-          <div class="tip-box push-tip">
-            <span>Last set only: Myo-rep finisher — hit 12 reps (RPE 9–10), rest 2–3 breaths, hit 4 reps, rest again, continue until you can no longer complete 4 clean reps.</span>
-            <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=395" target="_blank">6:35</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">06</div>
-          <div class="ex-card-title">Cable Tricep Kickback <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=420" target="_blank">7:00</a></div>
-          <div class="ex-card-meta">2×20–30</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Maintain a strict 1-second up / 1-second down tempo throughout. Do not allow form to break down as fatigue accumulates. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=424" target="_blank">7:04</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Keep elbows pinned to your sides throughout.</div>
           </div>
         </div>
       </div>
@@ -468,28 +337,30 @@
   </div>
 
   <!-- DAY 3 -->
-  <div id="d3" class="day-content">
+  <div id="d2" class="day-content">
     <div class="day-hero">
       <div class="day-hero-top">
-        <div class="day-hero-tag" style="color:var(--accent-pull)">DAY 3 · PULL</div>
-        <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=444" target="_blank">7:24</a>
-        <a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=444" target="_blank">7:24 – 9:35</a>
+        <div class="day-hero-tag" style="color:var(--accent-pull)">PULL</div>
       </div>
-      <h2>Lat-Focused Pull Day</h2>
-      <p class="day-hero-desc">Primary targets: lats, teres major, biceps, brachialis. Emphasis on shoulder adduction and constant tension techniques.</p>
+      <h2>PULL DAY</h2>
+      <p class="day-hero-desc">Primary targets: lats, mid-back, rear delts, biceps. Focus on feeling the muscle work, not just moving the weight.</p>
+    </div>
+    <div class="warmup-bar">
+      <strong>Warm-up</strong>
+      <span>5 minutes light cardio + shoulder dislocates + scapular circles.</span>
     </div>
     <div class="exercises-container">
 
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">01</div>
-          <div class="ex-card-title">Weighted Pull-up <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=452" target="_blank">7:32</a></div>
-          <div class="ex-card-meta">3×6</div>
+          <div class="ex-card-title">Lat Pulldown</div>
+          <div class="ex-card-meta">3×10–12, RPE 6–7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Maintain a very upright torso — this focuses the movement on shoulder adduction to hit the lats and teres directly. Legs straight down, chest pointed toward the bar, full range of motion. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=462" target="_blank">7:42</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Pull the bar to your upper chest, think elbows driving down to your hips.</div>
           </div>
         </div>
       </div>
@@ -497,17 +368,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">02</div>
-          <div class="ex-card-title">Seated Cable Row <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=481" target="_blank">8:01</a></div>
-          <div class="ex-card-meta">3×10–12</div>
+          <div class="ex-card-title">Seated Cable Row</div>
+          <div class="ex-card-meta">3×10–12, RPE 6–7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Attachment</div>
-            <div class="ex-row-val">Close-grip (mag grip recommended for wrist comfort).</div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Keep elbows tucked and drive them down toward the stomach, stopping at the midline. Do not let elbows flare out. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=483" target="_blank">8:03</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Squeeze shoulder blades at the end of every rep. No body swinging.</div>
           </div>
         </div>
       </div>
@@ -515,17 +382,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">03</div>
-          <div class="ex-card-title">Constant Tension Kneeling Cable Pullover <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=507" target="_blank">8:27</a></div>
-          <div class="ex-card-meta">3 sets</div>
+          <div class="ex-card-title">Face Pulls</div>
+          <div class="ex-card-meta">3×15, RPE 7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Tempo</div>
-            <div class="ex-row-val">Strict 1-second up / 1-second down to maintain constant tension on the lats. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=510" target="_blank">8:30</a></div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">End Condition</div>
-            <div class="ex-row-val">Continue until you can no longer maintain the prescribed tempo — do not grind through broken reps.</div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Pull toward your forehead and externally rotate at the end. Important for shoulder health.</div>
           </div>
         </div>
       </div>
@@ -533,13 +396,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">04</div>
-          <div class="ex-card-title">Hammer Strength Curl <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=530" target="_blank">8:50</a></div>
-          <div class="ex-card-meta">3 sets</div>
+          <div class="ex-card-title">Dumbbell Curl</div>
+          <div class="ex-card-meta">3×12, RPE 7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Allow a slight body swing to handle heavier loads. Grip the dumbbell hard to engage forearm flexors and brachioradialis alongside the biceps. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=535" target="_blank">8:55</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Supinate at the top. Keep elbows pinned to your sides.</div>
           </div>
         </div>
       </div>
@@ -547,352 +410,13 @@
       <div class="exercise-card">
         <div class="ex-card-header">
           <div class="ex-number">05</div>
-          <div class="ex-card-title">Incline Dumbbell Curl <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=557" target="_blank">9:17</a></div>
-          <div class="ex-card-meta">3 sets</div>
+          <div class="ex-card-title">Hammer Curl</div>
+          <div class="ex-card-meta">3×12, RPE 7</div>
         </div>
         <div class="ex-card-body">
           <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Keep the elbow pinned back throughout the rep. Supinate the dumbbell as you curl — drive through the pinky to fully isolate the biceps peak. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=559" target="_blank">9:19</a></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- DAY 4 -->
-  <div id="d4" class="day-content">
-    <div class="day-hero">
-      <div class="day-hero-top">
-        <div class="day-hero-tag" style="color:var(--accent-legs)">DAY 4 · LEGS</div>
-        <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=575" target="_blank">9:35</a>
-        <a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=575" target="_blank">9:35 – 12:15</a>
-      </div>
-      <h2>Posterior-Chain Leg Day</h2>
-      <p class="day-hero-desc">Primary targets: glutes, hamstrings, spinal erectors. Secondary: quads, calves. Heavy hinge pattern followed by targeted isolation and core work.</p>
-    </div>
-    <div class="exercises-container">
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">01</div>
-          <div class="ex-card-title">Deadlift <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=584" target="_blank">9:44</a></div>
-          <div class="ex-card-meta">3×3 @ 80–85% 1RM</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Bar Path</div>
-            <div class="ex-row-val">Perfectly vertical — centered over the middle of the foot to maintain balance and minimize the moment arm at the hips. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=597" target="_blank">9:57</a></div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Cues</div>
-            <div class="ex-row-val">Pack the lats tight before initiating. Scrape the bar against the shins on the way up for an efficient pull path.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">02</div>
-          <div class="ex-card-title">Machine Hack Squat <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=618" target="_blank">10:18</a></div>
-          <div class="ex-card-meta">3×10–12 · RPE 7–8</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Foot Position</div>
-            <div class="ex-row-val">Same stance width and foot flare as your barbell squat for maximum carryover.</div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Allow knees to travel forward over the toes to emphasize the quads. Leave 2–3 reps in the tank. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=624" target="_blank">10:24</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">03</div>
-          <div class="ex-card-title">Unilateral Hip Thrust <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=672" target="_blank">11:12</a></div>
-          <div class="ex-card-meta">3 sets</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Focus on squeezing each glute individually to drive the movement. Use a posterior pelvic tilt at the top and keep the chin tucked. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=674" target="_blank">11:14</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">04</div>
-          <div class="ex-card-title">Nordic Ham Curl + Prisoner Back Extension <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=683" target="_blank">11:23</a></div>
-          <div class="ex-card-meta">Superset · 3 sets</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Nordic Setup</div>
-            <div class="ex-row-val">Use a lat pulldown machine for foot anchoring and controlled assistance on the way down. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=685" target="_blank">11:25</a></div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Back Extension</div>
-            <div class="ex-row-val">Place hands behind the head (prisoner position) to extend the moment arm at the hips, increasing demand on glutes and upper back. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=691" target="_blank">11:31</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">05</div>
-          <div class="ex-card-title">Unilateral Leg Press Calf Raise <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=700" target="_blank">11:40</a></div>
-          <div class="ex-card-meta">3×8–10</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Order</div>
-            <div class="ex-row-val">Start with the weaker leg first. Focus on a deep stretch at the bottom between and during reps. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=702" target="_blank">11:42</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">06</div>
-          <div class="ex-card-title">Weighted L-Sit Hold <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=710" target="_blank">11:50</a></div>
-          <div class="ex-card-meta">3 sets</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Setup</div>
-            <div class="ex-row-val">Place a 10 or 25 lb bumper plate on the thighs, secured with a pull-up belt. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=714" target="_blank">11:54</a></div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Duration</div>
-            <div class="ex-row-val">Hold 10–15 seconds initially. Progress to 20–30 seconds over time as a long-term goal.</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- DAY 5 -->
-  <div id="d5" class="day-content">
-    <div class="day-hero">
-      <div class="day-hero-top">
-        <div class="day-hero-tag" style="color:var(--accent-push)">DAY 5 · PUSH</div>
-        <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=735" target="_blank">12:15</a>
-        <a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=735" target="_blank">12:15 – 15:03</a>
-      </div>
-      <h2>Delt-Focused Push Day</h2>
-      <p class="day-hero-desc">Primary targets: all delt heads, triceps long head, upper chest. Heavy overhead pressing combined with volume lateral raise work and direct neck training.</p>
-    </div>
-    <div class="exercises-container">
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">01</div>
-          <div class="ex-card-title">Overhead Press <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=739" target="_blank">12:19</a></div>
-          <div class="ex-card-meta">4×4 @ 80% 1RM</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Setup</div>
-            <div class="ex-row-val">Arch the upper back and tuck the glutes in to lock the body rigid, eliminating energy leaks so all power transfers directly into the bar.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">02</div>
-          <div class="ex-card-title">Close Grip Bench Press <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=759" target="_blank">12:39</a></div>
-          <div class="ex-card-meta">3×10 · RPE 7–8</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Grip</div>
-            <div class="ex-row-val">Bring hands in approximately one hand's width closer than your normal bench grip.</div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Tuck the elbows in more than a regular bench press and maintain a steady, controlled cadence throughout.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">03</div>
-          <div class="ex-card-title">Low-to-High Cable Crossovers <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=792" target="_blank">13:12</a></div>
-          <div class="ex-card-meta">3×10–12</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Cables start low; sweep up and across the body to fully contract the upper pec fibers.</div>
-          </div>
-          <div class="tip-box push-tip">
-            <span>Last set only: Go to failure, immediately drop weight by 50%, go to failure again.</span>
-            <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=796" target="_blank">13:16</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">04</div>
-          <div class="ex-card-title">Overhead Tricep Extension <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=827" target="_blank">13:47</a></div>
-          <div class="ex-card-meta">3 sets</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Keep the elbow locked in — no flaring. Achieve a big stretch at the bottom (long-head emphasis) and a full squeeze at the top. Maintain steady tension throughout. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=829" target="_blank">13:49</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">05</div>
-          <div class="ex-card-title">Dumbbell Lateral Raise 21s <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=847" target="_blank">14:07</a></div>
-          <div class="ex-card-meta">3 sets</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Structure</div>
-            <div class="ex-row-val">One continuous set of 21 reps across three ranges of motion — no rest between portions. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=855" target="_blank">14:15</a></div>
-          </div>
-          <div class="ex-row"><div class="ex-row-label">7 reps</div><div class="ex-row-val">Full range of motion (bottom to top).</div></div>
-          <div class="ex-row"><div class="ex-row-label">7 reps</div><div class="ex-row-val">Top ¾ of the movement only.</div></div>
-          <div class="ex-row"><div class="ex-row-label">7 reps</div><div class="ex-row-val">Bottom ½ of the movement only.</div></div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">06</div>
-          <div class="ex-card-title">Neck Training — 8-Way Machine <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=884" target="_blank">14:44</a></div>
-          <div class="ex-card-meta">1–2×/week</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Frequency</div>
-            <div class="ex-row-val">Aim for direct neck work 1–2 times per week as a minimum effective dose. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=886" target="_blank">14:46</a></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- DAY 6 -->
-  <div id="d6" class="day-content">
-    <div class="day-hero">
-      <div class="day-hero-top">
-        <div class="day-hero-tag" style="color:var(--accent-pull)">DAY 6 · PULL</div>
-        <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=903" target="_blank">15:03</a>
-        <a class="ts ts-range" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=903" target="_blank">15:03 – 18:10</a>
-      </div>
-      <h2>Mid-Back & Rear Delt Pull Day</h2>
-      <p class="day-hero-desc">Primary targets: mid-traps, rhomboids, rear delts, upper traps (optional), biceps. Full scapular range of motion emphasized on all rows.</p>
-    </div>
-    <div class="exercises-container">
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">01</div>
-          <div class="ex-card-title">Omni-Grip Lat Pulldown <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=928" target="_blank">15:28</a></div>
-          <div class="ex-card-meta">3 sets</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row"><div class="ex-row-label">Set 1</div><div class="ex-row-val">Wide overhand grip.</div></div>
-          <div class="ex-row"><div class="ex-row-label">Set 2</div><div class="ex-row-val">Moderate grip — just outside shoulder width.</div></div>
-          <div class="ex-row"><div class="ex-row-label">Set 3</div><div class="ex-row-val">Reverse close grip (supinated, hands close together). <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=930" target="_blank">15:30</a></div></div>
-          <div class="tip-box pull-tip"><span>Rotating grips across sets manages fatigue while providing slightly different lat stimuli per set.</span></div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">02</div>
-          <div class="ex-card-title">Chest Supported Row <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=954" target="_blank">15:54</a></div>
-          <div class="ex-card-meta">3×10–12</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Why Machine</div>
-            <div class="ex-row-val">The chest pad eliminates lower back fatigue, allowing near-failure effort without overloading smaller stabilizers.</div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Technique</div>
-            <div class="ex-row-val">Exaggerate scapular protraction (reach forward) at the bottom of every rep. At the top, squeeze the upper back hard and allow the chest to rise slightly off the pad. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=957" target="_blank">15:57</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">03</div>
-          <div class="ex-card-title">Rope Face Pulls <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=991" target="_blank">16:31</a></div>
-          <div class="ex-card-meta">3 sets</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Direction</div>
-            <div class="ex-row-val">Pull the rope slightly upward (toward the forehead) and externally rotate the shoulders at the end. Do not pull straight back — this shifts the target away from the rear delts and external rotators. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=993" target="_blank">16:33</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">04</div>
-          <div class="ex-card-title">Incline Dumbbell Shrug <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1005" target="_blank">16:45</a></div>
-          <div class="ex-card-meta">3 sets · Optional</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Note</div>
-            <div class="ex-row-val">Optional upper trap work. Use lifting straps to ensure grip is not the limiting factor. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1007" target="_blank">16:47</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">05</div>
-          <div class="ex-card-title">Rear Delt Isolation <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1024" target="_blank">17:04</a></div>
-          <div class="ex-card-meta">2 sets · Extended technique</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Phase 1</div>
-            <div class="ex-row-val">15 reps with scapulae protracted — sweep the weight outward, not backward, to isolate the rear delts without mid-trap involvement. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1026" target="_blank">17:06</a></div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Phase 2</div>
-            <div class="ex-row-val">Immediately follow with 10–15 reps actively squeezing the shoulder blades together — this brings in the mid-traps as the rear delts fatigue.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exercise-card">
-        <div class="ex-card-header">
-          <div class="ex-number">06</div>
-          <div class="ex-card-title">Easy Bar Pronated + Supinated Curl Superset <a class="ts" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1057" target="_blank">17:37</a></div>
-          <div class="ex-card-meta">3 sets</div>
-        </div>
-        <div class="ex-card-body">
-          <div class="ex-row">
-            <div class="ex-row-label">Phase 1</div>
-            <div class="ex-row-val">Pronated (overhand) grip first — fatigues the forearm flexors and brachioradialis while the biceps are still fresh. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1059" target="_blank">17:39</a></div>
-          </div>
-          <div class="ex-row">
-            <div class="ex-row-label">Phase 2</div>
-            <div class="ex-row-val">Immediately flip to supinated (underhand) grip — the forearms are now pre-exhausted, forcing the biceps to take over as the primary mover. <a class="ts ts-inline" href="https://www.youtube.com/watch?v=qVek72z3F1U&t=1068" target="_blank">17:48</a></div>
+            <div class="ex-row-label">Cue</div>
+            <div class="ex-row-val">Neutral grip throughout. Slower tempo means more tension.</div>
           </div>
         </div>
       </div>
@@ -901,6 +425,247 @@
   </div>
 
 </div>
+
+<!-- ===== PART 3 ===== -->
+<div id="tracker" class="section">
+  <div class="section-header">
+    <h2>OVERLOAD TRACKER</h2>
+    <p>Log your working weight each week. The tracker will tell you when you're ready to progress.</p>
+  </div>
+
+  <div class="tracker-grid">
+    <div class="lift-card" data-target="10">
+      <div class="lift-name">Bench Press</div>
+      <div class="lift-inputs">
+        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
+        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
+      </div>
+      <button class="log-btn">LOG SET</button>
+      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
+    </div>
+
+    <div class="lift-card" data-target="10">
+      <div class="lift-name">Overhead Press</div>
+      <div class="lift-inputs">
+        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
+        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
+      </div>
+      <button class="log-btn">LOG SET</button>
+      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
+    </div>
+
+    <div class="lift-card" data-target="12">
+      <div class="lift-name">Incline DB Press</div>
+      <div class="lift-inputs">
+        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
+        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
+      </div>
+      <button class="log-btn">LOG SET</button>
+      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
+    </div>
+
+    <div class="lift-card" data-target="12">
+      <div class="lift-name">Lat Pulldown</div>
+      <div class="lift-inputs">
+        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
+        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
+      </div>
+      <button class="log-btn">LOG SET</button>
+      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
+    </div>
+
+    <div class="lift-card" data-target="12">
+      <div class="lift-name">Seated Cable Row</div>
+      <div class="lift-inputs">
+        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
+        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
+      </div>
+      <button class="log-btn">LOG SET</button>
+      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
+    </div>
+
+    <div class="lift-card" data-target="10">
+      <div class="lift-name">Goblet Squat</div>
+      <div class="lift-inputs">
+        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
+        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
+      </div>
+      <button class="log-btn">LOG SET</button>
+      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
+    </div>
+
+    <div class="lift-card" data-target="10">
+      <div class="lift-name">Romanian Deadlift</div>
+      <div class="lift-inputs">
+        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
+        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
+      </div>
+      <button class="log-btn">LOG SET</button>
+      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
+    </div>
+
+    <div class="lift-card" data-target="12">
+      <div class="lift-name">Leg Press</div>
+      <div class="lift-inputs">
+        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
+        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
+      </div>
+      <button class="log-btn">LOG SET</button>
+      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PART 4 ===== -->
+<div id="progression" class="section">
+  <div class="section-header">
+    <h2>12-WEEK PROGRESSION</h2>
+    <p>A week-by-week roadmap for your first 12 weeks. Follow this exactly before making any changes to the program.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="phase-card" style="--phase-accent: var(--accent-pull)">
+      <div class="phase-num">1</div>
+      <div class="phase-body">
+        <div class="phase-weeks">Weeks 1–3</div>
+        <div class="phase-title">FOUNDATION</div>
+        <p class="phase-desc">Use light weights only. Focus entirely on learning each movement. End every set with 3–4 reps still in the tank (RPE 5–6). Do not progress weight yet.</p>
+      </div>
+    </div>
+
+    <div class="phase-card" style="--phase-accent: var(--accent-legs)">
+      <div class="phase-num">2</div>
+      <div class="phase-body">
+        <div class="phase-weeks">Weeks 4–6</div>
+        <div class="phase-title">BUILD</div>
+        <p class="phase-desc">Increase weight slightly if form is solid. Target RPE 6–7. Add 2.5 kg to lower body lifts and 1.25–2.5 kg to upper body lifts when you complete all reps cleanly for 2 sessions in a row.</p>
+      </div>
+    </div>
+
+    <div class="phase-card" style="--phase-accent: var(--accent-push)">
+      <div class="phase-num">3</div>
+      <div class="phase-body">
+        <div class="phase-weeks">Weeks 7–9</div>
+        <div class="phase-title">LOAD</div>
+        <p class="phase-desc">Now push to RPE 7–8 on your working sets. Continue adding weight using the same rule. You should be noticeably stronger than Week 1. Track every session.</p>
+      </div>
+    </div>
+
+    <div class="phase-card" style="--phase-accent: var(--accent-core)">
+      <div class="phase-num">4</div>
+      <div class="phase-body">
+        <div class="phase-weeks">Weeks 10–12</div>
+        <div class="phase-title">CONSOLIDATE</div>
+        <p class="phase-desc">Maintain intensity. Audit your form on every lift. At Week 12, compare your weights to Week 1 — most beginners see 20–40% strength increases. Then decide: repeat the block with heavier starting weights or move to an intermediate program.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PART 5 ===== -->
+<div id="restday" class="section">
+  <div class="section-header">
+    <h2>REST DAY ROUTINE</h2>
+    <p>Rest days are not wasted days. Use them to recover smarter, move better and show up stronger tomorrow.</p>
+  </div>
+  
+  <div class="restday-banner">
+    <div class="restday-left">
+      <div class="restday-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-core)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </div>
+      <div class="restday-title">WHY REST DAYS MATTER</div>
+      <p class="restday-desc">Muscle fibres repair and grow during rest, not during training. Skipping rest days blunts your progress. Beginners need at least 1 rest day between every training day.</p>
+    </div>
+    <div class="restday-right">
+      <div class="stat-pill"><strong>48 HRS</strong> — muscle repair window</div>
+      <div class="stat-pill"><strong>7–9 HRS</strong> — optimal sleep target</div>
+      <div class="stat-pill"><strong>3×/WEEK</strong> — your training frequency</div>
+    </div>
+  </div>
+
+  <div class="restday-subtitle">MORNING</div>
+  <div class="restday-grid">
+    <div class="principle-card">
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+      <div class="principle-title">MORNING WALK</div>
+      <div class="principle-body">10–20 minutes of light walking outside. Increases blood flow, reduces soreness and improves mood. Low intensity only — this is not cardio.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"><path d="M12 2a7 7 0 0 1 7 7c0 4-7 13-7 13S5 13 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+      <div class="principle-title">HYDRATION</div>
+      <div class="principle-body">Drink 500ml of water within 30 minutes of waking. Aim for 2.5–3 litres total throughout the day. Dehydration slows recovery significantly.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"><path d="M3 12 Q6 6 12 6 Q18 6 21 12 Q18 18 12 18 Q6 18 3 12z" opacity="0.2" fill="#f5a623"/><path d="M3 12 Q6 6 12 6 Q18 6 21 12 Q18 18 12 18 Q6 18 3 12z"/><path d="M12 9 v3 l2 2"/></svg></div>
+      <div class="principle-title">PROTEIN BREAKFAST</div>
+      <div class="principle-body">Hit 30–40g of protein at breakfast. Eggs, Greek yogurt, cottage cheese or a protein shake. Protein synthesis stays elevated for 24–48 hrs post-training.</div>
+    </div>
+  </div>
+
+  <div class="restday-subtitle pull">MOBILITY ROUTINE</div>
+  <p class="restday-subtitle-desc">10–15 minutes total. Do this in order. Hold each stretch for the time shown.</p>
+  
+  <div class="mobility-list">
+    <div class="mobility-card">
+      <div class="mobility-num">1</div>
+      <div class="mobility-info">
+        <div class="mobility-header">
+          <span class="mobility-name">Hip Flexor Stretch</span>
+          <span class="mobility-duration">60 SEC EACH SIDE</span>
+        </div>
+        <p class="mobility-instruction">Kneel on one knee, push hips forward gently. Essential if you sit for long periods.</p>
+      </div>
+    </div>
+    
+    <div class="mobility-card">
+      <div class="mobility-num">2</div>
+      <div class="mobility-info">
+        <div class="mobility-header">
+          <span class="mobility-name">Thoracic Rotation</span>
+          <span class="mobility-duration">45 SEC EACH SIDE</span>
+        </div>
+        <p class="mobility-instruction">Sit cross-legged, place hand behind head, rotate upper back open. Improves pressing and rowing mechanics.</p>
+      </div>
+    </div>
+    
+    <div class="mobility-card">
+      <div class="mobility-num">3</div>
+      <div class="mobility-info">
+        <div class="mobility-header">
+          <span class="mobility-name">Hamstring Doorway Stretch</span>
+          <span class="mobility-duration">60 SEC EACH SIDE</span>
+        </div>
+        <p class="mobility-instruction">Lie on your back, use a doorframe or wall to elevate one leg. Keep the leg straight.</p>
+      </div>
+    </div>
+    
+    <div class="mobility-card">
+      <div class="mobility-num">4</div>
+      <div class="mobility-info">
+        <div class="mobility-header">
+          <span class="mobility-name">Child's Pose with Reach</span>
+          <span class="mobility-duration">60 SEC</span>
+        </div>
+        <p class="mobility-instruction">Sit back on heels, reach arms forward on the floor. Decompress the lower back and open the lats.</p>
+      </div>
+    </div>
+    
+    <div class="mobility-card">
+      <div class="mobility-num">5</div>
+      <div class="mobility-info">
+        <div class="mobility-header">
+          <span class="mobility-name">Deep Squat Hold</span>
+          <span class="mobility-duration">60 SEC</span>
+        </div>
+        <p class="mobility-instruction">Hold a door frame for balance if needed. Work toward sitting comfortably in a full squat position over time.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script src="script.js"></script>
