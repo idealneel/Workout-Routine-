@@ -124,6 +124,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1px; background: var(--border);
+    margin-top: 40px;
   }
   .day-card {
     background: var(--surface);
@@ -172,6 +173,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 1px; background: var(--border);
+    padding-top: 24px;
   }
   .principle-card {
   background: var(--surface);
@@ -449,6 +451,8 @@
   @media (max-width: 600px) {
     .hero, .days-nav, .warmup-bar, .exercises-container { padding-left: 20px; padding-right: 20px; }
     .section-header { padding: 40px 20px 24px; margin-bottom: 24px; }
+    .weekly-grid { margin-top: 24px; }
+    .principles-grid { padding-top: 16px; }
     .nav-tabs { padding: 0 20px; }
     .ex-card-header { grid-template-columns: 32px 1fr; gap: 10px; }
     .ex-number { font-size: 28px; }
