@@ -433,7 +433,7 @@
 
   /* SECTION HEADER */
   .section-header {
-    padding: 48px 40px 28px;
+    padding: 48px 40px 40px;
     border-bottom: 1px solid var(--border);
     margin-bottom: 32px;
   }
@@ -446,7 +446,7 @@
     background-clip: text;
     margin-bottom: 12px;
   }
-  .section-header p { color: var(--muted); font-size: 13.5px; margin-top: 8px; }
+  .section-header p { color: var(--muted); font-size: 13.5px; margin-top: 10px; margin-bottom: 20px; }
 
   @media (max-width: 600px) {
     .hero, .days-nav, .warmup-bar, .exercises-container { padding-left: 20px; padding-right: 20px; }
