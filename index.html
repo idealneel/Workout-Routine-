@@ -35,7 +35,6 @@
 <div class="nav-tabs">
   <button class="nav-tab active" onclick="switchTab('weekly',this)">PART 1 — WEEKLY PLAN</button>
   <button class="nav-tab" onclick="switchTab('daily',this)">PART 2 — DAILY GUIDES</button>
-  <button class="nav-tab" onclick="switchTab('tracker',this)">PART 3 — PROGRESS TRACKER</button>
   <button class="nav-tab" onclick="switchTab('progression',this)">PART 4 — PROGRESSION GUIDE</button>
   <button class="nav-tab" onclick="switchTab('restday',this)">PART 5 — REST DAY</button>
 </div>
@@ -491,101 +490,17 @@
 
 </div>
 
-<!-- ===== PART 3 ===== -->
-<div id="tracker" class="section">
-  <div class="section-header">
-    <h2>OVERLOAD TRACKER</h2>
-    <p>Log your working weight each week. The tracker will tell you when you're ready to progress.</p>
-  </div>
-
-  <div class="tracker-grid">
-    <div class="lift-card" data-target="10">
-      <div class="lift-name">Bench Press</div>
-      <div class="lift-inputs">
-        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
-        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
-      </div>
-      <button class="log-btn">LOG SET</button>
-      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
-    </div>
-
-    <div class="lift-card" data-target="10">
-      <div class="lift-name">Overhead Press</div>
-      <div class="lift-inputs">
-        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
-        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
-      </div>
-      <button class="log-btn">LOG SET</button>
-      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
-    </div>
-
-    <div class="lift-card" data-target="12">
-      <div class="lift-name">Incline DB Press</div>
-      <div class="lift-inputs">
-        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
-        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
-      </div>
-      <button class="log-btn">LOG SET</button>
-      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
-    </div>
-
-    <div class="lift-card" data-target="12">
-      <div class="lift-name">Lat Pulldown</div>
-      <div class="lift-inputs">
-        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
-        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
-      </div>
-      <button class="log-btn">LOG SET</button>
-      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
-    </div>
-
-    <div class="lift-card" data-target="12">
-      <div class="lift-name">Seated Cable Row</div>
-      <div class="lift-inputs">
-        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
-        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
-      </div>
-      <button class="log-btn">LOG SET</button>
-      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
-    </div>
-
-    <div class="lift-card" data-target="10">
-      <div class="lift-name">Goblet Squat</div>
-      <div class="lift-inputs">
-        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
-        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
-      </div>
-      <button class="log-btn">LOG SET</button>
-      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
-    </div>
-
-    <div class="lift-card" data-target="10">
-      <div class="lift-name">Romanian Deadlift</div>
-      <div class="lift-inputs">
-        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
-        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
-      </div>
-      <button class="log-btn">LOG SET</button>
-      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
-    </div>
-
-    <div class="lift-card" data-target="12">
-      <div class="lift-name">Leg Press</div>
-      <div class="lift-inputs">
-        <div class="input-group"><label>Weight (kg)</label><input type="number" placeholder="0" min="0"></div>
-        <div class="input-group"><label>Reps</label><input type="number" placeholder="0" min="0"></div>
-      </div>
-      <button class="log-btn">LOG SET</button>
-      <p class="status-line">Complete all reps at RPE 7 or lower to progress</p>
-    </div>
-  </div>
-</div>
 
 <!-- ===== PART 4 ===== -->
 <div id="progression" class="section">
   <div class="section-header">
     <h2>12-WEEK PROGRESSION</h2>
     <p>A week-by-week roadmap for your first 12 weeks. Follow this exactly before making any changes to the program.</p>
+  </div>
+
+  <div class="banner-card progression">
+    <span class="banner-label">HOW TO USE THIS SECTION</span>
+    <p class="banner-text">Read through all 4 phases before you start training. You are currently in Phase 1. Mark each week as complete using the checkbox — your progress saves automatically and persists when you close the browser.</p>
   </div>
 
   <div class="timeline">
@@ -632,6 +547,11 @@
   <div class="section-header">
     <h2>REST DAY ROUTINE</h2>
     <p>Rest days are not wasted days. Use them to recover smarter, move better and show up stronger tomorrow.</p>
+  </div>
+
+  <div class="banner-card restday">
+    <span class="banner-label">HOW TO USE THIS SECTION</span>
+    <p class="banner-text">On any rest day, work through the Morning, Mobility and Evening sections in order. You do not need to do everything — even the mobility routine alone makes a significant difference to your recovery and next session performance.</p>
   </div>
   
   <div class="restday-banner">
@@ -740,10 +660,6 @@
   <button class="mobile-nav-btn" onclick="switchTab('daily', this)">
     <svg viewBox="0 0 24 24"><path d="M6 12h4M14 12h4M4 12h2M18 12h2M6 8v8M18 8v8"/></svg>
     <span>TRAIN</span>
-  </button>
-  <button class="mobile-nav-btn" onclick="switchTab('tracker', this)">
-    <svg viewBox="0 0 24 24"><polyline points="4,18 8,12 12,15 16,8 20,4"/></svg>
-    <span>TRACKER</span>
   </button>
   <button class="mobile-nav-btn" onclick="switchTab('progression', this)">
     <svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>

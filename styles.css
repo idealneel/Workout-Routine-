@@ -412,104 +412,39 @@
   pointer-events: all;
 }
 
-/* === TRACKER SECTION === */
-.tracker-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 32px;
-}
-
-.lift-card {
+/* === BANNER CARDS === */
+.banner-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  transition: border-color 0.3s ease;
+  padding: 16px 20px;
+  margin: 24px 40px;
+  border-radius: 0 6px 6px 0;
 }
-
-.lift-card:hover {
-  border-color: var(--accent-pull);
+.banner-card.progression {
+  border-left: 3px solid var(--accent-core);
 }
-
-.lift-name {
+.banner-card.restday {
+  border-left: 3px solid var(--accent-pull);
+}
+.banner-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent-pull);
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.lift-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.input-group label {
-  font-size: 11px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.input-group input {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 10px;
-  color: var(--text);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-}
-
-.input-group input:focus {
-  outline: none;
-  border-color: var(--accent-pull);
-}
-
-.log-btn {
-  background: var(--accent-pull);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 12px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
   letter-spacing: 1px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
+  margin-bottom: 8px;
+  display: block;
 }
-
-.log-btn:hover {
-  opacity: 0.9;
+.banner-card.progression .banner-label {
+  color: var(--accent-core);
 }
-
-.status-line {
-  font-size: 12px;
+.banner-card.restday .banner-label {
+  color: var(--accent-pull);
+}
+.banner-text {
+  font-size: 13px;
+  line-height: 1.6;
   color: var(--muted);
-  line-height: 1.4;
-}
-
-.status-line.status-success {
-  color: #10b981;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .tracker-grid {
-    grid-template-columns: 1fr;
-  }
+  margin: 0;
 }
 
 /* === PROGRESSION TIMELINE === */
