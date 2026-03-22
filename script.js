@@ -8,9 +8,14 @@ document.fonts.ready.then(function() {
 
 function switchTab(tab, el) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.nav-tab, .mobile-nav-btn').forEach(t => t.classList.remove('active'));
+    
     document.getElementById(tab).classList.add('active');
-    el.classList.add('active');
+    
+    // Sync all nav buttons (top and bottom) that target this tab
+    document.querySelectorAll(`[onclick*="switchTab('${tab}'"]`).forEach(btn => {
+      btn.classList.add('active');
+    });
   }
   function switchDay(dayId, btn) {
     document.querySelectorAll('.day-content').forEach(d => d.classList.remove('active'));
@@ -75,7 +80,72 @@ function updateStatus(reps, target, el) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', initTracker);
+/* === EXERCISE HIGHLIGHTING === */
+function initHighlighting() {
+  const cards = document.querySelectorAll('.exercise-card');
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
+
+      const isActive = card.classList.contains('active-ex');
+      
+      cards.forEach(c => c.classList.remove('active-ex', 'dimmed'));
+
+      if (!isActive) {
+        card.classList.add('active-ex');
+        cards.forEach(c => {
+          if (c !== card) c.classList.add('dimmed');
+        });
+      }
+    });
+  });
+}
+
+/* === NEXT EXERCISE BUTTONS === */
+function initNextExButtons() {
+  const cards = document.querySelectorAll('.exercise-card');
+  cards.forEach(card => {
+    // Inject button
+    const btn = document.createElement('button');
+    btn.className = 'next-ex-btn';
+    btn.innerText = 'NEXT EXERCISE';
+    card.appendChild(btn);
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Don't trigger card highlight toggle
+      
+      const container = card.closest('.exercises-container');
+      const allInContainer = Array.from(container.querySelectorAll('.exercise-card'));
+      const currentIndex = allInContainer.indexOf(card);
+      const nextCard = allInContainer[currentIndex + 1];
+
+      // Deactivate all highlights
+      document.querySelectorAll('.exercise-card').forEach(c => {
+        c.classList.remove('active-ex', 'dimmed');
+      });
+
+      if (nextCard) {
+        // Activate next
+        nextCard.classList.add('active-ex');
+        // Dim others
+        document.querySelectorAll('.exercise-card').forEach(c => {
+          if (c !== nextCard) c.classList.add('dimmed');
+        });
+        // Scroll to next
+        nextCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTracker();
+  initHighlighting();
+  initNextExButtons();
+});
+
 if (document.readyState === "complete" || document.readyState === "interactive") {
   initTracker();
+  initHighlighting();
+  initNextExButtons();
 }
