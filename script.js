@@ -92,6 +92,10 @@ function handleSwipe(card) {
   let targetCard = null;
 
   if (deltaX > 50) { // Swipe Left -> Next
+    if (currentIndex === allCards.length - 1) {
+      triggerCompletion(allCards.length, container);
+      return;
+    }
     targetCard = allCards[currentIndex + 1];
   } else if (deltaX < -50) { // Swipe Right -> Prev
     targetCard = allCards[currentIndex - 1];
@@ -132,4 +136,110 @@ document.addEventListener('DOMContentLoaded', () => {
 if (document.readyState === "complete" || document.readyState === "interactive") {
   initHighlighting();
   initSwipeGestures();
+}
+
+/* === WORKOUT COMPLETION === */
+function triggerCompletion(totalCards, container) {
+  const allCards = Array.from(container.querySelectorAll('.exercise-card'));
+  allCards.forEach(c => {
+    c.classList.remove('active-ex', 'dimmed');
+    c.classList.add('done-ex');
+  });
+  updateProgress(container);
+
+  setTimeout(() => {
+    const overlay = document.getElementById('workout-overlay');
+    if (!overlay) return;
+
+    const activeDayId = container.closest('.day-content').id;
+    let accentColor = '#e8445a'; // Push defaults
+    if (activeDayId === 'd2') accentColor = '#3ecfcf'; // Pull
+    else if (activeDayId === 'd3') accentColor = '#f5a623'; // Legs
+
+    const wcTitle = document.querySelector('.wc-title');
+    const wcStat = document.getElementById('wc-stat');
+    
+    if (wcTitle) wcTitle.style.color = accentColor;
+    if (wcStat) {
+      wcStat.style.color = accentColor;
+      wcStat.textContent = `${totalCards} EXERCISES COMPLETED`;
+    }
+
+    overlay.classList.add('visible');
+    launchConfetti(accentColor);
+    
+    overlay.onclick = () => {
+      overlay.classList.remove('visible');
+      container.closest('.day-content').scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+  }, 400);
+}
+
+function launchConfetti(accentColor) {
+  const canvas = document.getElementById('confetti-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+  const particleCount = 120;
+  
+  const colors = [accentColor, '#ffffff', accentColor + '80'];
+  
+  for (let i = 0; i < particleCount; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 4 + Math.random() * 8;
+    particles.push({
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      w: 6,
+      h: 12,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      angle: angle,
+      speed: speed,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      rot: Math.random() * 360,
+      rotSpeed: (Math.random() - 0.5) * 10,
+      life: 90
+    });
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let activeParticles = 0;
+
+    for (let i = 0; i < particleCount; i++) {
+      const p = particles[i];
+      if (p.life > 0) {
+        activeParticles++;
+        p.vy += 0.15;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rot += p.rotSpeed;
+        p.life--;
+        
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot * Math.PI / 180);
+        ctx.fillStyle = p.color;
+        
+        ctx.globalAlpha = p.life / 90;
+        
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      }
+    }
+
+    if (activeParticles > 0) {
+      requestAnimationFrame(animate);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+
+  animate();
 }

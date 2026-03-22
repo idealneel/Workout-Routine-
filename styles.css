@@ -430,7 +430,11 @@
   .tip-box.pull-tip { border-left-color: var(--accent-pull); }
 
   /* SECTION HEADER */
-  .section-header { padding: 40px 40px 32px; border-bottom: 1px solid var(--border); }
+  .section-header {
+    padding: 48px 40px 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
   .section-header h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 36px; letter-spacing: 2px;
@@ -440,11 +444,11 @@
     background-clip: text;
     margin-bottom: 12px;
   }
-  .section-header p { color: var(--muted); font-size: 13.5px; margin-top: 8px; padding-bottom: 4px; margin-bottom: 8px; }
+  .section-header p { color: var(--muted); font-size: 13.5px; margin-top: 8px; }
 
   @media (max-width: 600px) {
     .hero, .days-nav, .warmup-bar, .exercises-container { padding-left: 20px; padding-right: 20px; }
-    .section-header { padding: 32px 20px 24px; }
+    .section-header { padding: 40px 20px 24px; margin-bottom: 24px; }
     .nav-tabs { padding: 0 20px; }
     .ex-card-header { grid-template-columns: 32px 1fr; gap: 10px; }
     .ex-number { font-size: 28px; }
@@ -872,4 +876,67 @@
   .section-header { padding: 40px 24px 0; }
   .principles-grid, .weekly-grid { padding: 0 24px; background: none; gap: 16px; }
   .principle-card, .day-card { border-radius: 12px; border: 1px solid var(--border); }
+}
+
+/* WORKOUT COMPLETION CELEBRATION */
+#workout-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,11,0.97);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+  pointer-events: none;
+}
+#workout-overlay.visible { 
+  opacity: 1; 
+  pointer-events: auto;
+}
+#confetti-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.workout-complete-content {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+.wc-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.wc-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 20vw, 120px);
+  line-height: 0.9;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.wc-stat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 24px;
+}
+.wc-dismiss {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 40px;
+  letter-spacing: 1px;
+  animation: blink 2s ease infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
 }
