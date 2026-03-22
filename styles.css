@@ -1,3 +1,24 @@
+#skeleton {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0b;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 40px;
+  transition: opacity 0.4s ease;
+}
+.sk-bar {
+  background: #1e1e26;
+  border-radius: 4px;
+  animation: skpulse 1.2s ease-in-out infinite alternate;
+}
+@keyframes skpulse {
+  from { opacity: 0.4; }
+  to { opacity: 0.9; }
+}
+
 :root {
     --bg: #0a0a0b;
     --surface: #111114;

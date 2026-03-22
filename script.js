@@ -1,3 +1,11 @@
+document.fonts.ready.then(function() {
+  var sk = document.getElementById('skeleton');
+  if (sk) {
+    sk.style.opacity = '0';
+    setTimeout(function() { sk.style.display = 'none'; }, 400);
+  }
+});
+
 function switchTab(tab, el) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
