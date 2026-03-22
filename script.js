@@ -18,3 +18,16 @@ function switchTab(tab, el) {
     document.getElementById(dayId).classList.add('active');
     btn.classList.add('active-day');
   }
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.exercise-card, .day-card, .principle-card').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});

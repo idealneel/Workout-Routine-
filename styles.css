@@ -352,3 +352,27 @@
     .ex-card-header { grid-template-columns: 36px 1fr auto; gap: 10px; }
     .day-hero { padding-left: 20px; padding-right: 20px; }
   }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section {
+  animation: none;
+}
+.section.active {
+  animation: fadein 0.3s ease;
+}
+.day-content.active {
+  animation: fadein 0.3s ease;
+}
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
