@@ -273,7 +273,14 @@
   .day-content.active { display: block; }
 
   /* DAY HERO */
-  .day-hero { padding: 36px 40px 24px; border-bottom: 1px solid var(--border); }
+  .day-hero { 
+    padding: 36px 40px 24px; 
+    border-bottom: 1px solid var(--border);
+    border-left: 3px solid transparent;
+  }
+  #d1 .day-hero, #d4 .day-hero { border-left-color: var(--accent-legs); }
+  #d2 .day-hero, #d5 .day-hero { border-left-color: var(--accent-push); }
+  #d3 .day-hero, #d6 .day-hero { border-left-color: var(--accent-pull); }
   .day-hero-top {
     display: flex; align-items: center;
     gap: 12px; margin-bottom: 8px; flex-wrap: wrap;
@@ -304,6 +311,13 @@
     color: var(--accent-core);
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  }
+  .warmup-bar {
+    animation: warmpulse 3s ease-in-out infinite;
+  }
+  @keyframes warmpulse {
+    0%, 100% { border-left-color: var(--accent-core); }
+    50% { border-left-color: rgba(167,139,250,0.4); }
   }
 
   /* EXERCISES */
@@ -367,7 +381,11 @@
   .section-header { padding: 32px 40px 20px; border-bottom: 1px solid var(--border); }
   .section-header h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px; letter-spacing: 2px; color: #fff;
+    font-size: 36px; letter-spacing: 2px;
+    background: linear-gradient(90deg, #fff 60%, rgba(245,166,35,0.6));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   .section-header p { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
 
@@ -384,6 +402,11 @@
   transform: translateY(24px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+.reveal:nth-child(2) { transition-delay: 0.05s; }
+.reveal:nth-child(3) { transition-delay: 0.1s; }
+.reveal:nth-child(4) { transition-delay: 0.15s; }
+.reveal:nth-child(5) { transition-delay: 0.2s; }
+.reveal:nth-child(6) { transition-delay: 0.25s; }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
