@@ -37,10 +37,6 @@ document.querySelectorAll('.exercise-card, .day-card, .principle-card').forEach(
   observer.observe(el);
 });
 
-window.addEventListener('scroll', () => {
-  const btn = document.getElementById('back-to-top');
-  if (btn) btn.classList.toggle('visible', window.scrollY > 300);
-});
 
 /* === EXERCISE HIGHLIGHTING === */
 function initHighlighting() {
