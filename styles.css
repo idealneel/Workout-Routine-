@@ -292,6 +292,15 @@
     opacity: 0.45;
     transition: opacity 0.3s ease;
   }
+  .done-ex {
+    opacity: 1;
+    border-left-width: 3px;
+    border-left-style: solid;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  #d1 .done-ex, #d4 .done-ex { border-left-color: var(--accent-legs); }
+  #d2 .done-ex, #d5 .done-ex { border-left-color: var(--accent-push); }
+  #d3 .done-ex, #d6 .done-ex { border-left-color: var(--accent-pull); }
 
   .ex-card-header {
     display: grid;

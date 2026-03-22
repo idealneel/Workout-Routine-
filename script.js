@@ -45,16 +45,18 @@ function initHighlighting() {
     card.addEventListener('click', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
 
-      const isActive = card.classList.contains('active-ex');
+      const container = card.closest('.exercises-container');
+      if (!container) return;
       
-      cards.forEach(c => c.classList.remove('active-ex', 'dimmed'));
+      const allCards = Array.from(container.querySelectorAll('.exercise-card'));
+      const targetIndex = allCards.indexOf(card);
 
-      if (!isActive) {
-        card.classList.add('active-ex');
-        cards.forEach(c => {
-          if (c !== card) c.classList.add('dimmed');
-        });
-      }
+      allCards.forEach((c, i) => {
+        c.classList.remove('active-ex', 'done-ex', 'dimmed');
+        if (i < targetIndex) c.classList.add('done-ex');
+        else if (i === targetIndex) c.classList.add('active-ex');
+        else c.classList.add('dimmed');
+      });
     });
   });
 }
@@ -95,12 +97,12 @@ function handleSwipe(card) {
   }
 
   if (targetCard) {
-    document.querySelectorAll('.exercise-card').forEach(c => {
-      c.classList.remove('active-ex', 'dimmed');
-    });
-    targetCard.classList.add('active-ex');
-    document.querySelectorAll('.exercise-card').forEach(c => {
-      if (c !== targetCard) c.classList.add('dimmed');
+    const targetIndex = allCards.indexOf(targetCard);
+    allCards.forEach((c, i) => {
+      c.classList.remove('active-ex', 'done-ex', 'dimmed');
+      if (i < targetIndex) c.classList.add('done-ex');
+      else if (i === targetIndex) c.classList.add('active-ex');
+      else c.classList.add('dimmed');
     });
     targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
   }
